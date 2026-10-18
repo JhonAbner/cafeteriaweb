@@ -9,13 +9,13 @@
 
 :root {
   --marrom-escuro: #3b1f0e;
-  --marrom:        #6b3a1f;
-  --caramelo:      #c47c3a;
-  --creme:         #fdf5ec;
-  --bege:          #f0e0c8;
-  --branco:        #ffffff;
-  --texto:         #3b2a1a;
-  --cinza-leve:    #f5f0eb;
+  --marrom: #6b3a1f;
+  --caramelo: #c47c3a;
+  --creme: #fdf5ec;
+  --bege: #f0e0c8;
+  --branco: #ffffff;
+  --texto: #3b2a1a;
+  --cinza-leve: #f5f0eb;
 }
 
 html {
@@ -185,7 +185,7 @@ body {
 
 .card:hover {
   transform: translateX(6px);
-  box-shadow: 2px 4px 14px rgba(0,0,0,0.08);
+  box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .card-icon {
@@ -278,8 +278,8 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 16px 24px;
-  background: rgba(255,255,255,0.06);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--bege);
   font-size: 0.97rem;
 }
@@ -314,7 +314,7 @@ body {
   border-radius: 12px;
   overflow: hidden;
   border: 3px solid var(--bege);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .mapa-wrapper iframe {
@@ -372,7 +372,7 @@ body {
   background: var(--branco);
   border-radius: 12px;
   padding: 36px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
 }
 
 .contato-form h3 {
@@ -455,6 +455,7 @@ body {
    RESPONSIVO
 ================================================ */
 @media (max-width: 768px) {
+
   .sobre-grid,
   .localizacao-grid,
   .contato-grid {
@@ -471,5 +472,136 @@ body {
 
   .hero {
     height: 260px;
+  }
+}
+
+/* Container que centraliza o carrossel na tela */
+.carrossel-foco {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 450px;
+  /* Altura do espaço total */
+  margin: 50px auto;
+  /* O 'auto' é o que centraliza a div no meio da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo base de todas as imagens */
+.carrossel-foco img {
+  position: absolute;
+  /* Isso é o que permite que elas fiquem lado a lado/sobrepostas */
+  width: 320px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 20px;
+  /* Cantos arredondados */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  /* Sombra para dar profundidade */
+}
+
+/* Aplicando as animações */
+.img1 {
+  animation: ciclo1 9s infinite ease-in-out;
+}
+
+.img2 {
+  animation: ciclo2 9s infinite ease-in-out;
+}
+
+.img3 {
+  animation: ciclo3 9s infinite ease-in-out;
+}
+
+/* As animações que movem as imagens para os lados (-75% e 75%) e diminuem o tamanho (scale 0.8) */
+@keyframes ciclo1 {
+
+  0%,
+  25% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 2;
+  }
+
+  33%,
+  58% {
+    transform: translateX(-75%) scale(0.8);
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  66%,
+  91% {
+    transform: translateX(75%) scale(0.8);
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+@keyframes ciclo2 {
+
+  0%,
+  25% {
+    transform: translateX(75%) scale(0.8);
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  33%,
+  58% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 2;
+  }
+
+  66%,
+  91% {
+    transform: translateX(-75%) scale(0.8);
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  100% {
+    transform: translateX(75%) scale(0.8);
+    opacity: 0.4;
+    z-index: 1;
+  }
+}
+
+@keyframes ciclo3 {
+
+  0%,
+  25% {
+    transform: translateX(-75%) scale(0.8);
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  33%,
+  58% {
+    transform: translateX(75%) scale(0.8);
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  66%,
+  91% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 2;
+  }
+
+  100% {
+    transform: translateX(-75%) scale(0.8);
+    opacity: 0.4;
+    z-index: 1;
   }
 }
