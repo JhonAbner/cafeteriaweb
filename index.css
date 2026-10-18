@@ -481,28 +481,22 @@ body {
   width: 100%;
   max-width: 900px;
   height: 450px;
-  /* Altura do espaço total */
   margin: 50px auto;
-  /* O 'auto' é o que centraliza a div no meio da tela */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Estilo base de todas as imagens */
 .carrossel-foco img {
   position: absolute;
-  /* Isso é o que permite que elas fiquem lado a lado/sobrepostas */
   width: 320px;
   height: 380px;
   object-fit: cover;
   border-radius: 20px;
-  /* Cantos arredondados */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  /* Sombra para dar profundidade */
 }
 
-/* Aplicando as animações */
+/*Animações*/
 .img1 {
   animation: ciclo1 9s infinite ease-in-out;
 }
@@ -515,7 +509,6 @@ body {
   animation: ciclo3 9s infinite ease-in-out;
 }
 
-/* As animações que movem as imagens para os lados (-75% e 75%) e diminuem o tamanho (scale 0.8) */
 @keyframes ciclo1 {
 
   0%,
