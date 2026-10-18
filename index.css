@@ -1,0 +1,475 @@
+/* ================================================
+   RESET & BASE
+================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --marrom-escuro: #3b1f0e;
+  --marrom:        #6b3a1f;
+  --caramelo:      #c47c3a;
+  --creme:         #fdf5ec;
+  --bege:          #f0e0c8;
+  --branco:        #ffffff;
+  --texto:         #3b2a1a;
+  --cinza-leve:    #f5f0eb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--creme);
+  color: var(--texto);
+}
+
+/* ================================================
+   NAVBAR
+================================================ */
+.navbar {
+  background-color: var(--marrom-escuro);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--caramelo);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: var(--bege);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--caramelo);
+}
+
+/* ================================================
+   HERO / BANNER
+================================================ */
+.hero {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 10, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-overlay h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--branco);
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 1.15rem;
+  color: var(--bege);
+  font-weight: 300;
+}
+
+/* ================================================
+   CONTAINER GERAL
+================================================ */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--marrom);
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--caramelo);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ================================================
+   SOBRE NÓS
+================================================ */
+.sobre-section {
+  background-color: var(--branco);
+}
+
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.sobre-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--marrom);
+  margin-bottom: 20px;
+}
+
+.sobre-text p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.sobre-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: var(--cinza-leve);
+  border-left: 4px solid var(--caramelo);
+  border-radius: 8px;
+  padding: 20px 24px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateX(6px);
+  box-shadow: 2px 4px 14px rgba(0,0,0,0.08);
+}
+
+.card-icon {
+  font-size: 1.6rem;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--marrom);
+  margin: 6px 0 4px;
+}
+
+.card p {
+  font-size: 0.92rem;
+  color: #666;
+}
+
+/* ================================================
+   EQUIPE
+================================================ */
+.equipe-section {
+  background-color: var(--creme);
+}
+
+.equipe-grid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.equipe-grid .membro {
+  flex: 0 1 160px;
+}
+
+.membro {
+  text-align: center;
+  transition: transform 0.25s;
+}
+
+.membro:hover {
+  transform: translateY(-6px);
+}
+
+.avatar {
+  font-size: 4rem;
+  background: var(--bege);
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  border: 3px solid var(--caramelo);
+}
+
+.membro h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--marrom-escuro);
+}
+
+.membro p {
+  font-size: 0.88rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* ================================================
+   HORÁRIO
+================================================ */
+.horario-section {
+  background-color: var(--marrom-escuro);
+}
+
+.horario-section .section-title {
+  color: var(--caramelo);
+}
+
+.horario-tabela {
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.horario-linha {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: var(--bege);
+  font-size: 0.97rem;
+}
+
+.horario-linha.destaque {
+  background: rgba(196, 124, 58, 0.25);
+  color: var(--caramelo);
+  font-weight: 700;
+}
+
+/* ================================================
+   LOCALIZAÇÃO
+================================================ */
+.localizacao-section {
+  background-color: var(--branco);
+}
+
+.localizacao-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.localizacao-info p {
+  font-size: 0.97rem;
+  line-height: 2;
+  color: #555;
+}
+
+.mapa-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid var(--bege);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.mapa-wrapper iframe {
+  width: 100%;
+  height: 280px;
+  border: none;
+  display: block;
+}
+
+/* ================================================
+   CONTATO
+================================================ */
+.contato-section {
+  background-color: var(--creme);
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contato-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contato-icon {
+  font-size: 1.6rem;
+  margin-top: 2px;
+}
+
+.contato-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--marrom);
+  margin-bottom: 2px;
+}
+
+.contato-item p {
+  font-size: 0.92rem;
+  color: #666;
+}
+
+/* FORMULÁRIO */
+.contato-form {
+  background: var(--branco);
+  border-radius: 12px;
+  padding: 36px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+
+.contato-form h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--marrom);
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--marrom);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--bege);
+  border-radius: 8px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  background: var(--creme);
+  color: var(--texto);
+  transition: border-color 0.25s;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--caramelo);
+}
+
+#btn-enviar {
+  width: 100%;
+  padding: 13px;
+  background-color: var(--caramelo);
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.25s, transform 0.15s;
+}
+
+#btn-enviar:hover {
+  background-color: var(--marrom);
+  transform: translateY(-2px);
+}
+
+.form-feedback {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.93rem;
+  min-height: 20px;
+}
+
+/* ================================================
+   RODAPÉ
+================================================ */
+.rodape {
+  background-color: var(--marrom-escuro);
+  text-align: center;
+  padding: 24px;
+  color: var(--bege);
+  font-size: 0.9rem;
+}
+
+/* ================================================
+   RESPONSIVO
+================================================ */
+@media (max-width: 768px) {
+  .sobre-grid,
+  .localizacao-grid,
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .hero {
+    height: 260px;
+  }
+}

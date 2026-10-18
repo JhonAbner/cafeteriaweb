@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós | Cafeteria Aroma</title>
+  <meta name="description"
+    content="Conheça a Cafeteria Aroma — nossa história, localização e como entrar em contato conosco." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../index.css" />
+</head>
+
+<body>
+
+  <!-- CABEÇALHO / NAV -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">☕ Cafeteria Aroma</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../cardapio/cardapio.html">Cardápio</a></li>
+          <li><a href="#sobre" class="active">Sobre Nós</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER HERO -->
+  <section class="hero" id="sobre">
+    <img src="../banner.png" alt="Interior da cafeteria" class="hero-img" />
+    <div class="hero-overlay">
+      <h1>Sobre Nós</h1>
+      <p>Um lugar feito com amor, café e muito carinho.</p>
+    </div>
+  </section>
+
+  <!-- SEÇÃO SOBRE NÓS -->
+  <section class="sobre-section">
+    <div class="container">
+      <div class="sobre-grid">
+
+        <div class="sobre-text">
+          <h2>Nossa História</h2>
+          <p>
+            A <strong>Cafeteria Aroma</strong> nasceu em 2015 com um sonho simples: oferecer um espaço
+            aconchegante onde as pessoas pudessem se reunir, relaxar e saborear um bom café.
+          </p>
+          <p>
+            Começamos como uma pequena loja de bairro e, com o carinho dos nossos clientes,
+            crescemos para nos tornar um ponto de encontro querido pela comunidade.
+          </p>
+          <p>
+            Nossos grãos são cuidadosamente selecionados de pequenos produtores brasileiros,
+            e nossa equipe é treinada para preparar cada xícara com atenção e dedicação.
+          </p>
+        </div>
+
+        <div class="sobre-cards">
+          <div class="card" id="card-missao">
+            <span class="card-icon">🌱</span>
+            <h3>Missão</h3>
+            <p>Oferecer experiências únicas com café de qualidade em um ambiente acolhedor.</p>
+          </div>
+          <div class="card" id="card-valores">
+            <span class="card-icon">💛</span>
+            <h3>Valores</h3>
+            <p>Qualidade, sustentabilidade, respeito ao cliente e amor pelo que fazemos.</p>
+          </div>
+          <div class="card" id="card-visao">
+            <span class="card-icon">🚀</span>
+            <h3>Visão</h3>
+            <p>Ser a cafeteria preferida da cidade, reconhecida pela excelência e afeto.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPE -->
+  <section class="equipe-section">
+    <div class="container">
+      <h2 class="section-title">Nossa Equipe</h2>
+      <div class="equipe-grid">
+        <div class="membro" id="membro-queteli">
+          <div class="avatar">👩‍🍳</div>
+          <h4>Queteli</h4>
+          <p>Designer & Front-end</p>
+        </div>
+        <div class="membro" id="membro-jhon">
+          <div class="avatar">👨‍💻</div>
+          <h4>Jhon Abner</h4>
+          <p>Desenvolvedor</p>
+        </div>
+        <div class="membro" id="membro-raylla">
+          <div class="avatar">👩‍💼</div>
+          <h4>Raylla</h4>
+          <p>Conteúdo & UX</p>
+        </div>
+        <div class="membro" id="membro-daniel">
+          <div class="avatar">👨‍🎨</div>
+          <h4>Daniel</h4>
+          <p>Diagramação</p>
+        </div>
+        <div class="membro" id="membro-isaac">
+          <div class="avatar">👨‍🍳</div>
+          <h4>Isaac</h4>
+          <p>Gastronomia & Receitas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORÁRIO DE FUNCIONAMENTO -->
+  <section class="horario-section">
+    <div class="container">
+      <h2 class="section-title">Horário de Funcionamento</h2>
+      <div class="horario-tabela">
+        <div class="horario-linha">
+          <span>Segunda a Sexta</span>
+          <span>07:00 – 20:00</span>
+        </div>
+        <div class="horario-linha">
+          <span>Sábado</span>
+          <span>08:00 – 18:00</span>
+        </div>
+        <div class="horario-linha destaque">
+          <span>Domingo</span>
+          <span>09:00 – 14:00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section class="localizacao-section" id="localizacao">
+    <div class="container">
+      <h2 class="section-title">Onde Estamos</h2>
+      <div class="localizacao-grid">
+        <div class="localizacao-info">
+          <p>📍 <strong>Endereço:</strong> Av. Porto Seguro, 450 – Centro, Eunápolis – BA</p>
+          <p>🕐 <strong>Referência:</strong> Próximo à Praça Central de Eunápolis</p>
+          <p>🅿️ <strong>Estacionamento:</strong> Estacionamento gratuito no local</p>
+        </div>
+        <!-- Mapa simulado com iframe do OpenStreetMap (não precisa de chave de API) -->
+        <div class="mapa-wrapper">
+          <iframe id="mapa" title="Localização da Cafeteria Aroma"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-39.585%2C-16.382%2C-39.565%2C-16.367&layer=mapnik"
+            allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato-section" id="contato">
+    <div class="container">
+      <h2 class="section-title">Entre em Contato</h2>
+      <div class="contato-grid">
+
+        <!-- Informações de contato -->
+        <div class="contato-info">
+          <div class="contato-item">
+            <span class="contato-icon">📞</span>
+            <div>
+              <strong>Telefone</strong>
+              <p>(73) 99999-0000</p>
+            </div>
+          </div>
+          <div class="contato-item">
+            <span class="contato-icon">📧</span>
+            <div>
+              <strong>E-mail</strong>
+              <p>contato@cafeteriaaroma.com.br</p>
+            </div>
+          </div>
+          <div class="contato-item">
+            <span class="contato-icon">📱</span>
+            <div>
+              <strong>WhatsApp</strong>
+              <p>(73) 99999-0000</p>
+            </div>
+          </div>
+          <div class="contato-item">
+            <span class="contato-icon">📸</span>
+            <div>
+              <strong>Instagram</strong>
+              <p>@cafeteriaaroma</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulário de contato -->
+        <form class="contato-form" id="contato-form">
+          <h3>Envie uma mensagem</h3>
+
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem..." required></textarea>
+          </div>
+
+          <button type="submit" id="btn-enviar">Enviar Mensagem</button>
+
+          <p id="form-feedback" class="form-feedback"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <p>© 2026 Cafeteria Aroma. Feito com ☕ e carinho.</p>
+  </footer>
+
+  <script src="sobre.js"></script>
+
+</body>
+
+</html>
