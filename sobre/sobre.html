@@ -8,8 +8,9 @@
   <meta name="description"
     content="Conheça a Cafeteria Aroma — nossa história, localização e como entrar em contato conosco." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="../index.css" />
 </head>
@@ -17,18 +18,17 @@
 <body>
 
   <!-- CABEÇALHO / NAV -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo">☕ Cafeteria Aroma</a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="../cardapio/cardapio.html">Cardápio</a></li>
-          <li><a href="#sobre" class="active">Sobre Nós</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="topo">
+    <a class="logo" href="../index.html"><img src="../logocafeteria.svg" alt="Ícone Aroma"></a>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="../reserva/reserva.html">Reservas</a></li>
+        <li><a href="#sobre" aria-current="page">Sobre nós</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- BANNER HERO -->
@@ -227,7 +227,8 @@
 
   <!-- RODAPÉ -->
   <footer class="rodape">
-    <p>© 2026 Cafeteria Aroma. Feito com amor, ☕ e carinho.</p>
+    <p>© 2026 Cafeteria Aroma. Feito com amor, café e carinho.</p>
+    <p><a href="#localizacao">Localização</a></p>
   </footer>
 
   <script src="sobre.js"></script>
