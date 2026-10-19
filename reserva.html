@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reservar mesa | Cafeteria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reserva.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topo">
+    <a class="logo" href="index.html">Cafeteria</a>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="reserva.html" aria-current="page">Reservas</a></li>
+        <li><a href="sobre.html">Sobre nós</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="intro">
+      <h1>Reserve sua mesa</h1>
+      <p>Preencha os dados e continue a conversa com a gente pelo WhatsApp para confirmar.</p>
+    </section>
+
+    <div class="layout">
+      <section class="painel-form" aria-labelledby="titulo-form">
+        <h2 id="titulo-form">Dados da reserva</h2>
+
+        <form id="form-reserva" novalidate>
+          <div class="campo">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required>
+            <p class="erro" id="erro-nome" aria-live="polite"></p>
+          </div>
+
+          <div class="linha">
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@email.com" required>
+              <p class="erro" id="erro-email" aria-live="polite"></p>
+            </div>
+            <div class="campo">
+              <label for="telefone">WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" autocomplete="tel" inputmode="numeric" placeholder="(73) 91234-5678" required>
+              <p class="erro" id="erro-telefone" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="linha tres">
+            <div class="campo">
+              <label for="data">Data</label>
+              <input type="date" id="data" name="data" required>
+              <p class="erro" id="erro-data" aria-live="polite"></p>
+            </div>
+            <div class="campo">
+              <label for="hora">Horário</label>
+              <input type="time" id="hora" name="hora" step="900" required>
+              <p class="erro" id="erro-hora" aria-live="polite"></p>
+            </div>
+            <div class="campo">
+              <label for="pessoas">Pessoas</label>
+              <select id="pessoas" name="pessoas" required>
+                <option value="">Escolha</option>
+                <option value="1">1 pessoa</option>
+                <option value="2">2 pessoas</option>
+                <option value="3">3 pessoas</option>
+                <option value="4">4 pessoas</option>
+                <option value="5">5 pessoas</option>
+                <option value="6">6 pessoas</option>
+                <option value="7">7 pessoas</option>
+                <option value="8">8 pessoas</option>
+                <option value="9+">9 ou mais</option>
+              </select>
+              <p class="erro" id="erro-pessoas" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="obs">Observações <span class="opcional">(opcional)</span></label>
+            <textarea id="obs" name="obs" rows="3" maxlength="200" placeholder="Aniversário, cadeirinha de bebê, mesa perto da janela…"></textarea>
+          </div>
+
+          <button type="submit" class="botao">Solicitar reserva</button>
+        </form>
+
+        <div id="confirmacao" class="confirmacao" hidden tabindex="-1">
+          <h2>Quase lá!</h2>
+          <p>Confira os dados e envie pelo WhatsApp para a cafeteria confirmar sua mesa.</p>
+          <dl id="resumo"></dl>
+          <div class="acoes">
+            <a id="link-whatsapp" class="botao" href="#" target="_blank" rel="noopener">Enviar pelo WhatsApp</a>
+            <button type="button" id="nova-reserva" class="botao secundario">Fazer outra reserva</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="painel-info" aria-labelledby="titulo-horarios">
+        <h2 id="titulo-horarios">Horários de atendimento</h2>
+        <ul class="horarios">
+          <li><span>Segunda a sexta</span><strong>07h às 19h</strong></li>
+          <li><span>Sábado e domingo</span><strong>08h às 14h</strong></li>
+        </ul>
+        <p>Reservas com pelo menos 1 hora de antecedência. Para grupos de 9 ou mais, chame no WhatsApp para combinarmos os detalhes.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <p>Rua Exemplo, 123 – Eunápolis, BA</p>
+    <p><a href="contato.html">Contato e localização</a></p>
+  </footer>
+
+  <script src="reserva.js"></script>
+</body>
+</html>
