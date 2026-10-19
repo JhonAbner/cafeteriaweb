@@ -1,0 +1,225 @@
+/* ================================================
+   CARDÁPIO — Cafeteria Aroma
+   Usa as variáveis e componentes de ../index.css
+   (navbar, hero, container, section-title, rodapé)
+   Carregue SEMPRE depois do index.css.
+================================================ */
+
+/* HERO menor que o da página inicial */
+.hero.hero-cardapio {
+  height: 280px;
+}
+
+/* ================================================
+   FILTRO DE CATEGORIAS
+================================================ */
+.filtro-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.filtro-btn {
+  font-family: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--marrom);
+  background: var(--branco);
+  border: 1.5px solid var(--bege);
+  border-radius: 999px;
+  padding: 9px 22px;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s, transform 0.15s;
+}
+
+.filtro-btn:hover {
+  border-color: var(--caramelo);
+  transform: translateY(-2px);
+}
+
+.filtro-btn.ativo {
+  background: var(--caramelo);
+  border-color: var(--caramelo);
+  color: var(--branco);
+}
+
+.filtro-btn:focus-visible {
+  outline: 3px solid var(--caramelo);
+  outline-offset: 2px;
+}
+
+/* ================================================
+   DESTAQUES (com foto)
+================================================ */
+.destaques-section {
+  background-color: var(--branco);
+}
+
+.destaques-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.destaque {
+  background: var(--creme);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(59, 31, 14, 0.1);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.destaque:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(59, 31, 14, 0.16);
+}
+
+.destaque img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.destaque-info {
+  padding: 20px 22px 24px;
+}
+
+.destaque-info h3 {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  color: var(--marrom);
+  margin-bottom: 6px;
+}
+
+.destaque-info p {
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 14px;
+}
+
+.preco-tag {
+  display: inline-block;
+  background: var(--caramelo);
+  color: var(--branco);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+
+/* ================================================
+   CATEGORIAS DO CARDÁPIO
+================================================ */
+.menu-section {
+  background-color: var(--creme);
+}
+
+.categoria {
+  background: var(--branco);
+  border-radius: 16px;
+  padding: 36px 40px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border-top: 4px solid var(--caramelo);
+}
+
+.categoria[hidden] {
+  display: none;
+}
+
+.categoria-titulo {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  color: var(--marrom);
+  margin-bottom: 4px;
+}
+
+.categoria-sub {
+  font-size: 0.92rem;
+  color: #888;
+  margin-bottom: 28px;
+}
+
+.menu-lista {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 56px;
+}
+
+.item-topo {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.item-topo h4 {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  color: var(--marrom-escuro);
+  font-weight: 600;
+}
+
+/* pontilhado entre o nome e o preço */
+.item-linha {
+  flex: 1;
+  border-bottom: 2px dotted var(--caramelo);
+  opacity: 0.55;
+  transform: translateY(-4px);
+}
+
+.item-preco {
+  font-weight: 700;
+  color: var(--caramelo);
+  white-space: nowrap;
+}
+
+.item p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* ================================================
+   NOTA FINAL
+================================================ */
+.cardapio-nota {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  line-height: 1.7;
+  margin-top: 12px;
+}
+
+/* ================================================
+   RESPONSIVO
+================================================ */
+@media (max-width: 900px) {
+  .destaques-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero.hero-cardapio {
+    height: 220px;
+  }
+
+  .destaques-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .categoria {
+    padding: 28px 22px 22px;
+  }
+
+  .menu-lista {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

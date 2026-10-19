@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cardápio | Cafeteria Aroma</title>
+    <meta name="description"
+        content="Confira o cardápio da Cafeteria Aroma: cafés, bebidas geladas, doces e salgados feitos com carinho." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <!-- Estilo base do site (navbar, hero, rodapé...) + estilo do cardápio -->
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="cardapio.css" />
+</head>
+
+<body>
+
+    <!-- CABEÇALHO / NAV -->
+    <header class="topo">
+        <a class="logo" href="../index.html"><img src="../logocafeteria.svg" alt="Ícone Aroma"></a>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="cardapio.html" aria-current="page">Cardápio</a></li>
+                <li><a href="../reserva/reserva.html">Reservas</a></li>
+                <li><a href="../sobre/sobre.html#sobre">Sobre nós</a></li>
+                <li><a href="../sobre/sobre.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BANNER HERO -->
+    <section class="hero hero-cardapio">
+        <img src="../banner.png" alt="Interior da cafeteria" class="hero-img" />
+        <div class="hero-overlay">
+            <h1>Nosso Cardápio</h1>
+            <p>Tudo preparado na hora, com ingredientes selecionados.</p>
+        </div>
+    </section>
+
+    <!-- DESTAQUES -->
+    <section class="destaques-section">
+        <div class="container">
+            <h2 class="section-title">Queridinhos da Casa</h2>
+            <div class="destaques-grid">
+
+                <article class="destaque">
+                    <img src="../cafe.jpg" alt="Cappuccino cremoso com cacau em pó" />
+                    <div class="destaque-info">
+                        <h3>Cappuccino Aroma</h3>
+                        <p>Espresso encorpado, leite vaporizado e um toque de cacau em pó.</p>
+                        <span class="preco-tag">R$ 12,00</span>
+                    </div>
+                </article>
+
+                <article class="destaque">
+                    <img src="../bolo.jpg" alt="Bolo de chocolate com cobertura de ganache" />
+                    <div class="destaque-info">
+                        <h3>Bolo de Chocolate</h3>
+                        <p>Massa fofinha, recheio cremoso e cobertura de ganache com granulado.</p>
+                        <span class="preco-tag">R$ 14,00</span>
+                    </div>
+                </article>
+
+                <article class="destaque">
+                    <img src="../croissant.jpg" alt="Croissant recheado com carne desfiada e queijo" />
+                    <div class="destaque-info">
+                        <h3>Croissant Recheado</h3>
+                        <p>Croissant folhado e crocante com carne desfiada e queijo cremoso.</p>
+                        <span class="preco-tag">R$ 18,00</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CARDÁPIO COMPLETO -->
+    <section class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Cardápio Completo</h2>
+
+            <!-- Filtro -->
+            <div class="filtro-bar" role="group" aria-label="Filtrar por categoria">
+                <button class="filtro-btn ativo" data-filtro="todos" aria-pressed="true">Todos</button>
+                <button class="filtro-btn" data-filtro="cafes" aria-pressed="false">☕ Cafés</button>
+                <button class="filtro-btn" data-filtro="gelados" aria-pressed="false">🧊 Gelados</button>
+                <button class="filtro-btn" data-filtro="doces" aria-pressed="false">🍰 Doces</button>
+                <button class="filtro-btn" data-filtro="salgados" aria-pressed="false">🥐 Salgados</button>
+            </div>
+
+            <!-- CAFÉS -->
+            <section class="categoria" data-categoria="cafes">
+                <h3 class="categoria-titulo">☕ Cafés Quentes</h3>
+                <p class="categoria-sub">Grãos selecionados, moídos na hora.</p>
+                <ul class="menu-lista">
+                    <li class="item">
+                        <div class="item-topo"><h4>Espresso</h4><span class="item-linha"></span><span class="item-preco">R$ 6,00</span></div>
+                        <p>Curto e intenso, com crema dourada.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Café Coado</h4><span class="item-linha"></span><span class="item-preco">R$ 7,00</span></div>
+                        <p>Coado no filtro de pano, do jeito tradicional.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Cappuccino Aroma</h4><span class="item-linha"></span><span class="item-preco">R$ 12,00</span></div>
+                        <p>Espresso, leite vaporizado e cacau em pó.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Latte</h4><span class="item-linha"></span><span class="item-preco">R$ 13,00</span></div>
+                        <p>Espresso suave com bastante leite cremoso.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Mocha</h4><span class="item-linha"></span><span class="item-preco">R$ 14,00</span></div>
+                        <p>Espresso, chocolate e leite vaporizado.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Chocolate Quente</h4><span class="item-linha"></span><span class="item-preco">R$ 13,00</span></div>
+                        <p>Chocolate cremoso para os dias de chuva.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- GELADOS -->
+            <section class="categoria" data-categoria="gelados">
+                <h3 class="categoria-titulo">🧊 Bebidas Geladas</h3>
+                <p class="categoria-sub">Para refrescar a tarde.</p>
+                <ul class="menu-lista">
+                    <li class="item">
+                        <div class="item-topo"><h4>Café Gelado</h4><span class="item-linha"></span><span class="item-preco">R$ 12,00</span></div>
+                        <p>Espresso sobre gelo com leite à parte.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Cold Brew</h4><span class="item-linha"></span><span class="item-preco">R$ 14,00</span></div>
+                        <p>Extraído a frio por 12 horas, suave e adocicado.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Frappé de Café</h4><span class="item-linha"></span><span class="item-preco">R$ 16,00</span></div>
+                        <p>Café batido com gelo, leite e calda de caramelo.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Limonada com Hortelã</h4><span class="item-linha"></span><span class="item-preco">R$ 10,00</span></div>
+                        <p>Limão siciliano, hortelã fresca e gelo.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Suco Natural</h4><span class="item-linha"></span><span class="item-preco">R$ 11,00</span></div>
+                        <p>Laranja, abacaxi com hortelã ou maracujá.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- DOCES -->
+            <section class="categoria" data-categoria="doces">
+                <h3 class="categoria-titulo">🍰 Doces</h3>
+                <p class="categoria-sub">Feitos todos os dias na nossa cozinha.</p>
+                <ul class="menu-lista">
+                    <li class="item">
+                        <div class="item-topo"><h4>Bolo de Chocolate (fatia)</h4><span class="item-linha"></span><span class="item-preco">R$ 14,00</span></div>
+                        <p>Recheio cremoso e cobertura de ganache.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Torta de Limão (fatia)</h4><span class="item-linha"></span><span class="item-preco">R$ 14,00</span></div>
+                        <p>Base crocante, creme de limão e merengue.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Brownie</h4><span class="item-linha"></span><span class="item-preco">R$ 10,00</span></div>
+                        <p>Casquinha crocante por fora, macio por dentro.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Cookie de Chocolate</h4><span class="item-linha"></span><span class="item-preco">R$ 9,00</span></div>
+                        <p>Gotas de chocolate meio amargo.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Croissant de Chocolate</h4><span class="item-linha"></span><span class="item-preco">R$ 11,00</span></div>
+                        <p>Folhado amanteigado recheado com chocolate.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- SALGADOS -->
+            <section class="categoria" data-categoria="salgados">
+                <h3 class="categoria-titulo">🥐 Salgados</h3>
+                <p class="categoria-sub">Para o café da manhã ou um lanche reforçado.</p>
+                <ul class="menu-lista">
+                    <li class="item">
+                        <div class="item-topo"><h4>Croissant Recheado</h4><span class="item-linha"></span><span class="item-preco">R$ 18,00</span></div>
+                        <p>Carne desfiada com queijo cremoso.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Bagel com Cream Cheese</h4><span class="item-linha"></span><span class="item-preco">R$ 16,00</span></div>
+                        <p>Bagel tostado com cream cheese e gergelim.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Sanduíche Natural</h4><span class="item-linha"></span><span class="item-preco">R$ 15,00</span></div>
+                        <p>Frango desfiado, cenoura e folhas verdes.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Misto Quente</h4><span class="item-linha"></span><span class="item-preco">R$ 12,00</span></div>
+                        <p>Pão na chapa com presunto e queijo.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Pão de Queijo (porção)</h4><span class="item-linha"></span><span class="item-preco">R$ 10,00</span></div>
+                        <p>Seis unidades, quentinhas e macias.</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-topo"><h4>Torrada com Ovos</h4><span class="item-linha"></span><span class="item-preco">R$ 17,00</span></div>
+                        <p>Pão rústico, ovos mexidos e ervas frescas.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <p class="cardapio-nota">
+                Os valores podem sofrer alterações. Consulte nossa equipe sobre opções sem lactose e sem glúten.
+            </p>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <p>© 2026 Cafeteria Aroma. Feito com amor, café e carinho.</p>
+        <p><a href="../sobre/sobre.html#localizacao">Localização</a></p>
+    </footer>
+
+    <script>
+        // Filtro de categorias do cardápio
+        const botoes = document.querySelectorAll('.filtro-btn');
+        const categorias = document.querySelectorAll('.categoria');
+
+        botoes.forEach(function (botao) {
+            botao.addEventListener('click', function () {
+                const filtro = botao.dataset.filtro;
+
+                botoes.forEach(function (b) {
+                    const ativo = b === botao;
+                    b.classList.toggle('ativo', ativo);
+                    b.setAttribute('aria-pressed', ativo);
+                });
+
+                categorias.forEach(function (cat) {
+                    cat.hidden = !(filtro === 'todos' || cat.dataset.categoria === filtro);
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
