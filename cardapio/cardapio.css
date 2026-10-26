@@ -185,6 +185,44 @@
   margin-top: 4px;
 }
 
+/* Tamanhos e volumes em ml */
+.item-tamanhos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.tamanho-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Instrument Sans", system-ui, -apple-system, sans-serif;
+  font-size: 0.8rem;
+  color: var(--marrom);
+  background: var(--cinza-leve);
+  border: 1px solid var(--bege);
+  border-radius: 999px;
+  padding: 3px 10px;
+  line-height: 1.35;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.tamanho-pill strong {
+  color: var(--marrom-escuro);
+  font-weight: 600;
+}
+
+.tamanho-pill .tamanho-preco {
+  color: var(--caramelo);
+  font-weight: 700;
+}
+
+.tamanho-pill:hover {
+  background: var(--branco);
+  border-color: var(--caramelo);
+}
+
 /* ================================================
    NOTA FINAL
 ================================================ */
