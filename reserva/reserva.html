@@ -37,7 +37,7 @@
 
     <div class="layout">
       <section class="painel-form" aria-labelledby="titulo-form">
-        <h2 id="titulo-form">Dados da reserva</h2>
+        <h2 id="titulo-form">Dados da reserva.</h2>
 
         <form id="form-reserva" novalidate>
           <div class="campo">
@@ -125,6 +125,26 @@
     <p>© 2026 Cafeteria Aroma. Feito com amor, café e carinho.</p>
     <p><a href="sobre/sobre.html#localizacao">Localização</a></p>
   </footer>
+
+  <!-- Janela de confirmação de reserva -->
+  <div id="modal-confirmacao" class="modal-backdrop" hidden role="dialog" aria-modal="true"
+    aria-labelledby="modal-titulo">
+    <div class="modal-card">
+      <button type="button" class="modal-fechar" id="modal-btn-fechar" aria-label="Fechar janela">&times;</button>
+      <div class="modal-icone" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <h3 id="modal-titulo">Reserva Confirmada!</h3>
+      <p class="modal-texto">Sua reserva foi solicitada com sucesso! A conversa no WhatsApp foi aberta para você enviar
+        os dados para a cafeteria.</p>
+      <div class="modal-acoes">
+        <button type="button" id="modal-btn-ok" class="botao">Entendido</button>
+      </div>
+    </div>
+  </div>
 
   <script src="reserva.js"></script>
 </body>

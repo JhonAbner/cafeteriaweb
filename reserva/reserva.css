@@ -359,3 +359,111 @@ select.invalido {
     transition: none !important;
   }
 }
+
+/* Modal de confirmação de reserva */
+.modal-backdrop[hidden] {
+  display: none;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(35, 23, 16, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+.modal-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--linha);
+  border-radius: calc(var(--raio) + 4px);
+  padding: 2.25rem 2rem 2rem;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 16px 36px rgba(46, 27, 18, 0.25);
+  animation: modalPopIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-fechar {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--mocha);
+  cursor: pointer;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.modal-fechar:hover {
+  background: var(--papel);
+  color: var(--cereja);
+}
+
+.modal-icone {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.25rem;
+  background: #eaf5ea;
+  color: #27ae60;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-card h3 {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  color: var(--espresso);
+  margin: 0 0 0.75rem;
+}
+
+.modal-texto {
+  font-size: 1rem;
+  color: var(--tinta);
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+}
+
+.modal-acoes {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-acoes .botao {
+  min-width: 160px;
+  width: auto;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

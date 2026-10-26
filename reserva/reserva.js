@@ -211,5 +211,53 @@ btnNova.addEventListener("click", () => {
   });
   confirmacao.hidden = true;
   form.hidden = false;
+  if (typeof fecharModalConfirmacao === "function") fecharModalConfirmacao();
   campos.nome.focus();
 });
+
+/* ===== Janela de confirmação de reserva ===== */
+const modalConfirmacao = document.getElementById("modal-confirmacao");
+const btnFecharModal = document.getElementById("modal-btn-fechar");
+const btnOkModal = document.getElementById("modal-btn-ok");
+
+function abrirModalConfirmacao() {
+  if (!modalConfirmacao) return;
+  modalConfirmacao.hidden = false;
+  if (btnOkModal) btnOkModal.focus();
+  document.addEventListener("keydown", fecharModalPorTeclado);
+}
+
+function fecharModalConfirmacao() {
+  if (!modalConfirmacao) return;
+  modalConfirmacao.hidden = true;
+  document.removeEventListener("keydown", fecharModalPorTeclado);
+}
+
+function fecharModalPorTeclado(e) {
+  if (e.key === "Escape") {
+    fecharModalConfirmacao();
+  }
+}
+
+if (linkWhatsapp) {
+  linkWhatsapp.addEventListener("click", () => {
+    abrirModalConfirmacao();
+  });
+}
+
+if (btnFecharModal) {
+  btnFecharModal.addEventListener("click", fecharModalConfirmacao);
+}
+
+if (btnOkModal) {
+  btnOkModal.addEventListener("click", fecharModalConfirmacao);
+}
+
+if (modalConfirmacao) {
+  modalConfirmacao.addEventListener("click", e => {
+    if (e.target === modalConfirmacao) {
+      fecharModalConfirmacao();
+    }
+  });
+}
+
